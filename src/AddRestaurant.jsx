@@ -8,7 +8,7 @@ export default class AddRestaurants extends React.Component{
     handleInput
     render(){
         return(
-            <div style={{margin:20}}>
+            <div className={'container'}>
                 <form  style={{fontSize:20,fontFamily:'Sofia'}}>
                     <div className='form-group row' style={{paddingTop:20}}>
                         <label className='col-sm-3 col-md-3 label label-default control-label'
