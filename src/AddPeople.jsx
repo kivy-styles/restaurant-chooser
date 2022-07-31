@@ -9,7 +9,7 @@ export default class AddPeople extends React.Component{
     }
     render(){
         return(
-            <div className={'container'}>
+            <div style={{marginTop:20, marginLeft:20, marginRight:20}}>
                 <form style={{fontSize:20,fontFamily:'Sofia'}} onSubmit={(event)=>{
                     let navigate=useNavigate()
                     event.preventDefault();

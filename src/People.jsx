@@ -16,11 +16,9 @@ export default class People extends React.Component{
         this.setState({listdata:inPeople})
     }
     handledelete(item){
-        return <Alert key={item.id} variant='danger' style={{position:'absolute', top:'50%', left:'35%', fontSize:18}}
-                      show={!this.state.show} dismissible>
+        return <Alert key={item.id} variant='danger' show={!this.state.show} dismissible>
             Are you sure you want to delete this person<span className='row'>
-                    <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4'
-                            onClick={()=>this.setState({show:true})}>No</button>
+                    <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4' onClick={()=>this.setState({show:true})}>No</button>
                     <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4' onClick={(Event)=>{
                         Event.preventDefault();
                         let inPeople=localStorage.getItem('People')
@@ -51,9 +49,9 @@ export default class People extends React.Component{
         const Items=this.state.listdata.map(
             (item)=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
                 <div className='row'>
-                <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.firstname}</div>
-                <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.lastname}</div>
-                <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.relationship}</div>
+                <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.firstname}</div>
+                <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.lastname}</div>
+                <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.relationship}</div>
                 <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary' onClick={(Event)=> {
                     this.setState({show:false, item:item})
                 }
@@ -62,13 +60,13 @@ export default class People extends React.Component{
         </div>
         )
         return(
-            <div className={'container'}>
+            <div style={{marginTop:20, marginLeft:20, marginRight:20}}>
                 <div style={{marginTop:20}} onClick={()=>{location.href='/addpeople'}}>
                     <button className='btn btn-primary btn-lg' style={{width:'100%'}}><a
                         style={{color:'white', textDecoration:'none'}} href='/addpeople'>Add People</a></button>
                 </div>
                 <form style={{width:'100%'}}>
-                    <div className='input-group search'>
+                    <div className='input-group' style={{paddingTop:10}}>
                         <div className='input-group-addon'>
                             <button className='btn' onClick={(event)=>{
                                 event.preventDefault()

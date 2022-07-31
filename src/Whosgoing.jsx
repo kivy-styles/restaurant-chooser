@@ -41,7 +41,7 @@ export default function Whosgoing(){
         }
     },[])
     return(
-        <div className={'container'}>
+        <div style={{padding:20}}>
             <div style={{textAlign:'center', paddingBottom:20}}><h2>Who's going?</h2></div>
             <div style={{paddingBottom:20, display:'flex',  paddingRight:20, justifyContent:'right'}}>
                 <button className={'btn btn-default animate__animated animate__pulse animate__infinite'}
@@ -74,12 +74,11 @@ export default function Whosgoing(){
                 }}>Next &rarr;</button>
             </div>
             <div className='list-group'>
-            {List && List.length>=2 && List.map(item=><div key={item.id} className='list-group-item'
-                                                           style={{fontSize:18, fontFamily:'Sofia'}}>
+            {List && List.length>=2 && List.map(item=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
                 <div className='row'>
-                    <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.firstname}</div>
-                    <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.lastname}</div>
-                    <div className='col-sm-3 col-md-3 col-lg-3 people-detail'>{item.relationship}</div>
+                    <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.firstname}</div>
+                    <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.lastname}</div>
+                    <div className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:20}}>{item.relationship}</div>
                     <input type={'checkbox'} className='col-sm-3 col-md-3' onClick={(Event)=> {
                         const select=Select
                         select[item.id]=!select[item.id]
@@ -173,7 +172,7 @@ export function Filter(){
         }
     },[])
     return(
-        <div className={'container'}>
+        <div style={{padding:20}}>
             <div style={{textAlign:'center',paddingBottom:20}}><h2>Add requirements<span style={{fontSize:19,
                 fontStyle:'italic'}}>(Optional)</span></h2>
                 <div style={{marginTop:10, fontStyle:'italic'}}>Only Restaurants that meet any of your requirements will be shortlisted.
@@ -410,7 +409,7 @@ export function Chosen(){
     }
 
     return(
-        <div className={'container'} style={{fontSize:18}}>
+        <div style={{padding:20, fontSize:18}}>
             <div style={{textAlign:'center',paddingBottom:20}}><h2>Shortlisted Restaurants</h2><div
                 style={{marginTop:10, fontStyle:'italic'}}>
                 Below is the list of Restaurants that
@@ -467,7 +466,7 @@ export function Alldone(){
         }
     },[])
     return(
-        <div className={'container'}>
+        <div style={{padding:20}}>
             <div style={{textAlign:'center', padding:10}}><h1>
                 Bon Appetit!!
             </h1></div>
