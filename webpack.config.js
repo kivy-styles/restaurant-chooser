@@ -45,7 +45,7 @@ module.exports={
         static: path.resolve(__dirname, 'static'),
         historyApiFallback:true,
         hot:true,
-        allowedHost:'all'
+        allowedHost:'all',
         proxy:{
             '/api/*': {
                 target:'http://localhost:3000',
