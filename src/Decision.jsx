@@ -7,21 +7,21 @@ export default class Decision extends React.Component{
         this.state={show:false, show2:false, show3:false}
     }
     handleAlert1(){
-        return <Alert show={this.state.show} style={{position:'absolute', top:'70%', left:'35%', fontSize:18}}
+        return <Alert show={this.state.show} style={{position:'absolute', top:'50%', left:'35%', fontSize:18}}
                       variant='danger' onClose={()=>this.setState({show:false})} dismissible>
             <Alert.Heading>Oops!!</Alert.Heading>
             You have not added anyone to the list of People
         </Alert>
     }
     handleAlert2(){
-        return <Alert show={this.state.show2} style={{position:'absolute', top:'70%', left:'35%', fontSize:18}}
+        return <Alert show={this.state.show2} style={{position:'absolute', top:'50%', left:'35%', fontSize:18}}
                       onClose={()=>this.setState({show2:false})} variant='danger' dismissible>
             <Alert.Heading>Oops!!</Alert.Heading>
             You have not added any restaurant to the list of Restaurants
         </Alert>
     }
     handleAlert3 (){
-        return <Alert show={this.state.show3} style={{position:'absolute', top:'70%', left:'35%', fontSize:18}}
+        return <Alert show={this.state.show3} style={{position:'absolute', top:'50%', left:'35%', fontSize:18}}
                       onClose={()=>this.setState({show3:false})} variant='danger' dismissible>
             <Alert.Heading>Oops!!</Alert.Heading>
             The people and restaurants lists are currently empty<br/>
@@ -29,9 +29,9 @@ export default class Decision extends React.Component{
     }
     render(){
         return(
-            <div style={{padding:20, textAlign:'center'}}>
+            <div className={'main-container'} style={{textAlign:'center'}}>
                 <div>
-                    <img src='./images/arrow.png' style={{width:'8%'}}/>
+                    <img className={'arrow'} src='./images/arrow.png'/>
                 </div>
                 <div onClick={()=>{
                     let inPeople=localStorage.getItem('People')

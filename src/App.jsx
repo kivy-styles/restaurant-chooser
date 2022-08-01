@@ -25,10 +25,11 @@ const App = ()=>(
                 </div>
             </div>
             <ul className='nav nav-pills'>
-                <div className='row'>
-                    <li className='col-sm-4 col-md-4 col-lg-4' style={{paddingLeft:37}}><a href='./people' style={{textDecoration:'none', color:'white', fontSize:20,fontFamily:'Sofia'}}>People</a></li>
-                    <li className='col-sm-3 col-md-3 col-lg-3' style={{paddingLeft:10, paddingRight:20}}><a href='./decision' style={{textDecoration:'none', color:'white', fontSize:20,fontFamily:'Sofia'}}>Decision</a></li>
-                    <li className='col-sm-4 col-md-4 col-lg-4' style={{paddingLeft:37, paddingRight:110}}><a href='./restaurants'  style={{textDecoration:'none', color:'white',fontSize:20,fontFamily:'Sofia'}}>Restaurants</a></li>
+                <div className='row arrange-nav'>
+                    <li className='col-sm-4 col-md-4 col-lg-4 people-nav' >
+                        <a href='./people' style={{textDecoration:'none', color:'white', fontSize:20,fontFamily:'Sofia'}}>People</a></li>
+                    <li className='col-sm-3 col-md-3 col-lg-3 decision-nav'><a href='./decision' style={{textDecoration:'none', color:'white', fontSize:20,fontFamily:'Sofia'}}>Decision</a></li>
+                    <li className='col-sm-4 col-md-4 col-lg-4 restaurant-nav'><a href='./restaurants'  style={{textDecoration:'none', color:'white',fontSize:20,fontFamily:'Sofia'}}>Restaurants</a></li>
                 </div>
             </ul>
         </nav>
