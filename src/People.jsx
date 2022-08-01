@@ -49,11 +49,11 @@ export default class People extends React.Component{
     render(){
         const Items=this.state.listdata.map(
             (item)=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
-                <div className='row'>
-                <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.firstname}</div>
-                <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.lastname}</div>
-                <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.relationship}</div>
-                <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary' onClick={(Event)=> {
+                <div className='row arrange-people'>
+                <div className='col-sm-3 col-md-3 col-lg-3 detail firstname'>{item.firstname}</div>
+                <div className='col-sm-3 col-md-3 col-lg-3 detail lastname'>{item.lastname}</div>
+                <div className='col-sm-3 col-md-3 col-lg-3 detail none'>{item.relationship}</div>
+                <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary delete-btn' onClick={(Event)=> {
                     this.setState({show:false, item:item})
                 }
                 }>Delete</button>

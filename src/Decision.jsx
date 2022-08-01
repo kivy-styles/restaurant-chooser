@@ -61,7 +61,7 @@ export default class Decision extends React.Component{
                         location.href='/whosgoing'
                     }
                 }}>
-                    <img src='./images/dishes.png'/>
+                    <img className={'image'} src='./images/dishes.png'/>
                 </div>
                 <div>
                     {this.state.show && this.handleAlert1()}
