@@ -16,7 +16,7 @@ export default class People extends React.Component{
         this.setState({listdata:inPeople})
     }
     handledelete(item){
-        return <Alert key={item.id} variant='danger' style={{position:'absolute', top:'50%', left:'35%', fontSize:18}}
+        return <Alert key={item.id} variant='danger' style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', fontSize:18}}
                       show={!this.state.show} dismissible>
             Are you sure you want to delete this person<span className='row'>
                     <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4' onClick={()=>this.setState({show:true})}>No</button>
