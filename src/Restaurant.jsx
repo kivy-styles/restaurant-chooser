@@ -51,7 +51,7 @@ export default class Restaurants extends React.Component{
             (item)=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
                 <div className='row arrange-people'>
                     <div className='col-sm-3 col-md-3 col-lg-3 restaurant-name'>{item.name}</div>
-                    <span className='col-sm-6 col-md-6'></span>
+                    <span className='col-sm-6 col-md-6 none'></span>
                     <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary delete-btn' onClick={(Event)=> {
                         this.setState({show:false, item:item})
                     }
