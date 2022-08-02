@@ -33,7 +33,7 @@ export default class Decision extends React.Component{
                 <div>
                     <img className={'arrow animate__animated animate__infinite animate__shakeY animate__slower'} src='./images/arrow.png'/>
                 </div>
-                <div onClick={()=>{
+                <div style={{cursor:'pointer'}} onClick={()=>{
                     let inPeople=localStorage.getItem('People')
                     let inRestaurants= localStorage.getItem('Restaurants')
                     if(inPeople===null){
