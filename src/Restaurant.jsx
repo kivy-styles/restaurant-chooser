@@ -49,10 +49,10 @@ export default class Restaurants extends React.Component{
     render(){
         const Items=this.state.listdata.map(
             (item)=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
-                <div className='row'>
-                    <div className='col-sm-3 col-md-3 col-lg-3'>{item.name}</div>
+                <div className='row arrange-people'>
+                    <div className='col-sm-3 col-md-3 col-lg-3 restaurant-name'>{item.name}</div>
                     <span className='col-sm-6 col-md-6'></span>
-                    <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary' onClick={(Event)=> {
+                    <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary delete-btn' onClick={(Event)=> {
                         this.setState({show:false, item:item})
                     }
                     }>Delete</button>

@@ -75,11 +75,11 @@ export default function Whosgoing(){
             </div>
             <div className='list-group'>
             {List && List.length>=2 && List.map(item=><div key={item.id} className='list-group-item' style={{fontSize:18, fontFamily:'Sofia'}}>
-                <div className='row'>
-                    <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.firstname}</div>
-                    <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.lastname}</div>
-                    <div className='col-sm-3 col-md-3 col-lg-3 detail'>{item.relationship}</div>
-                    <input type={'checkbox'} className='col-sm-3 col-md-3' onClick={(Event)=> {
+                <div className='row arrange-people'>
+                    <div className='col-sm-3 col-md-3 col-lg-3 detail firstname'>{item.firstname}</div>
+                    <div className='col-sm-3 col-md-3 col-lg-3 detail lastname'>{item.lastname}</div>
+                    <div className='col-sm-3 col-md-3 col-lg-3 detail none'>{item.relationship}</div>
+                    <input type={'checkbox'} className='col-sm-3 col-md-3 delete-btn' onClick={(Event)=> {
                         const select=Select
                         select[item.id]=!select[item.id]
                         setSelect(select)
@@ -388,10 +388,11 @@ export function Chosen(){
                 <Modal.Title>Who's vetoing?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {obj.map(item=>{if(item.vetoed==='no'){return <div key={item.id} className={'row'} style={{paddingBottom:5}}>
-                    <div className={'col-sm-4'}>{item.firstname}</div>
-                    <div className={'col-sm-4'}>{item.lastname}</div>
-                    <div className={'col-sm-4'}><button className={'btn btn-primary'} onClick={
+                {obj.map(item=>{if(item.vetoed==='no'){return <div key={item.id} className={'row arrange-people'}
+                                                                   style={{paddingBottom:5}}>
+                    <div className={'col-sm-4 firstname'}>{item.firstname}</div>
+                    <div className={'col-sm-4 lastname'}>{item.lastname}</div>
+                    <div className={'col-sm-4 delete-btn'}><button className={'btn btn-primary'} onClick={
                         ()=>{item.vetoed='yes'
                         setShow2(false)}
                     }>Veto</button></div>
@@ -409,25 +410,25 @@ export function Chosen(){
     }
 
     return(
-        <div className={'detail'} style={{fontSize:18}}>
+        <div className={'main-container'} style={{fontSize:18}}>
             <div style={{textAlign:'center',paddingBottom:20}}><h2>Shortlisted Restaurants</h2><div
                 style={{marginTop:10, fontStyle:'italic'}}>
                 Below is the list of Restaurants that
                 matched your requirements </div></div>
-            <div className={'row'} style={{fontFamily:'Sofia'}}>
-                <div className={'col-sm-3'}>NAME</div>
-                <div className={'col-sm-3'}>CUISINE</div>
-                <div className={'col-sm-3'}>RATING</div>
-                <div className={'col-sm-3'}>DELIVERY</div>
+            <div className={'row arrange-people'} style={{fontFamily:'Sofia'}}>
+                <div className={'col-sm-3 firstname'}>NAME</div>
+                <div className={'col-sm-3 lastname'}>CUISINE</div>
+                <div className={'col-sm-3 none'}>RATING</div>
+                <div className={'col-sm-3 delete-btn'}>DELIVERY</div>
             </div>
             <div className={'list-group'}style={{fontFamily:'Sofia'}}>
             {Restaurants.map(item=>(
                 <div key={item.id} className={'list-group-item'}>
-                    <div className={'row'}>
-                    <div className={'col-sm-3'}>{item.name}</div>
-                    <div className={'col-sm-3'}>{item.cuisine}</div>
-                    <div className={'col-sm-3'}>{item.rating}</div>
-                    <div className={'col-sm-3'}>{item.delivery}</div>
+                    <div className={'row arrange-people'}>
+                    <div className={'col-sm-3 firstname'}>{item.name}</div>
+                    <div className={'col-sm-3 lastname'}>{item.cuisine}</div>
+                    <div className={'col-sm-3 none'}>{item.rating}</div>
+                    <div className={'col-sm-3 delete-btn'}>{item.delivery}</div>
                     </div>
                 </div>
             ))}
