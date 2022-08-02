@@ -462,7 +462,11 @@ export function Alldone(){
             setDone(theone)
         }
         return ()=>{
-            localStorage.removeItem('theone')
+            window.localStorage.removeItem('theone')
+            window.localStorage.removeItem('People')
+            window.localStorage.removeItem('Restaurant')
+            window.localStorage.removeItem('chosenRestaurants')
+            window.localStorage.removeItem('Participants')
             alert()
         }
     },[])
