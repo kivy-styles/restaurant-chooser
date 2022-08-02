@@ -17,10 +17,10 @@ export default class People extends React.Component{
     }
     handledelete(item){
         return <Alert key={item.id} variant='danger' style={{position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)', fontSize:18}}
-                      show={!this.state.show} dismissible>
+                      show={!this.state.show} onClose={()=>this.setState({show:true})} dismissible>
             Are you sure you want to delete this person<span className='row arrange-alert'>
                     <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4 alert-btn' onClick={()=>this.setState({show:true})}>No</button>
-                    <button className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4 alert-btn' onClick={(Event)=>{
+                    <button style={{marginLeft:20}} className='btn btn-primary btn-sm col-sm-4 col-md-4 col-lg-4 alert-btn' onClick={(Event)=>{
                         Event.preventDefault();
                         let inPeople=localStorage.getItem('People')
                         if(inPeople===null){
