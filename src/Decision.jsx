@@ -31,7 +31,7 @@ export default class Decision extends React.Component{
         return(
             <div className={'main-container'} style={{textAlign:'center'}}>
                 <div>
-                    <img className={'arrow animate__animated animate__infinite animate__pulse'} src='./images/arrow.png'/>
+                    <img className={'arrow animate__animated animate__infinite animate__shakeY'} src='./images/arrow.png'/>
                 </div>
                 <div onClick={()=>{
                     let inPeople=localStorage.getItem('People')
