@@ -29,7 +29,7 @@ export default class Decision extends React.Component{
     }
     render(){
         return(
-            <div className={'main-container'} style={{textAlign:'center'}}>
+            <div id={'decision-container'} className={'main-container'} style={{textAlign:'center'}}>
                 <div>
                     <img className={'arrow animate__animated animate__infinite animate__shakeY animate__slower'} src='./images/arrow.png'/>
                 </div>
