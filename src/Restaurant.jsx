@@ -52,7 +52,7 @@ export default class Restaurants extends React.Component{
                 <div className='row arrange-people'>
                     <div className='col-sm-3 col-md-3 col-lg-3 restaurant-name'>{item.name}</div>
                     <span className='col-sm-6 col-md-6 none'></span>
-                    <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary delete-btn' onClick={(Event)=> {
+                    <button className='col-sm-3 col-md-3 col-lg-3 btn btn-primary delete-btn-res' onClick={(Event)=> {
                         this.setState({show:false, item:item})
                     }
                     }>Delete</button>
