@@ -14,7 +14,7 @@ export default class AddPeople extends React.Component{
                     let navigate=useNavigate()
                     event.preventDefault();
                     navigate('./people',{replace:true})}}>
-                    <div className='form-group row' style={{paddingTop:20}}>>
+                    <div className='form-group row' style={{paddingTop:20}}>
                         <label className='col-sm-3 col-md-3 col-lg-3 label label-default control-label'
                                htmlFor='firstname'>> First name</label>
                         <input className='col-sm-9 col-md-9 col-lg-9 form-control' id='firstname' type='text' name='firstname'
