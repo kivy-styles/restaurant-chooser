@@ -417,7 +417,7 @@ export function Chosen(){
                 matched your requirements </div></div>
             <div className={'row arrange-people'} style={{fontFamily:'Sofia'}}>
                 <div className={'col-sm-3 firstname'}>NAME</div>
-                <div className={'col-sm-3 lastname'}>CUISINE</div>
+                <div className={'col-sm-3 lastname padding'}>CUISINE</div>
                 <div className={'col-sm-3 none'}>RATING</div>
                 <div className={'col-sm-3 delete-btn'}>DELIVERY</div>
             </div>
@@ -426,7 +426,7 @@ export function Chosen(){
                 <div key={item.id} className={'list-group-item'}>
                     <div className={'row arrange-people'}>
                     <div className={'col-sm-3 firstname'}>{item.name}</div>
-                    <div className={'col-sm-3 lastname'}>{item.cuisine}</div>
+                    <div className={'col-sm-3 lastname padding'}>{item.cuisine}</div>
                     <div className={'col-sm-3 none'}>{item.rating}</div>
                     <div className={'col-sm-3 delete-btn'}>{item.delivery}</div>
                     </div>
@@ -463,8 +463,6 @@ export function Alldone(){
         }
         return ()=>{
             window.localStorage.removeItem('theone')
-            window.localStorage.removeItem('People')
-            window.localStorage.removeItem('Restaurants')
             window.localStorage.removeItem('chosenRestaurants')
             window.localStorage.removeItem('Participants')
             alert()
