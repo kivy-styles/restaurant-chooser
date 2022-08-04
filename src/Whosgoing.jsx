@@ -465,7 +465,6 @@ export function Alldone(){
             window.localStorage.removeItem('theone')
             window.localStorage.removeItem('chosenRestaurants')
             window.localStorage.removeItem('Participants')
-            alert()
         }
     },[])
     return(
